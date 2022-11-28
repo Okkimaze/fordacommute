@@ -1,0 +1,218 @@
+@import "features.css";
+@import "about.css";
+@import "subscribe.css";
+@import "review.css";
+@import "pricing.css";
+@import "contact.css";
+@import "footer.css";
+:root{
+	--navy: #06283D;
+	--blue: #256D85;
+	--cold: #47B5FF;
+	--winter: #327793;
+	--gradient: linear-gradient(90deg, var(--navy), var(--cold));
+	--transparent:  #d1d1d126;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: times new roman;
+}
+.main-container{
+	height: 100%;
+	width: 100%;
+	min-width: 250px;
+}
+.main-container .header{
+	height: 5.8rem;
+	width: 100%;
+	background: #ffff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	position: fixed;
+	z-index: 100000;
+}
+.main-container .header i{
+	color: var(--navy);
+	font-size: 2.5rem;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translateY(-50%);
+	display: none;
+}
+.main-container .header .fa-solid.fa-circle-up{
+	display: block;
+	position: fixed;
+	top: 90%;
+	right: -50%;
+	font-size: 3rem;
+	transition: .3s ease;
+	z-index: 10000;
+}
+.main-container .header .fa-solid.fa-circle-up:hover{
+	color: var(--gradient);
+}
+.main-container .header .fa-solid.fa-circle-up.sticky{
+	right: 1.5%;
+}
+.main-container .header h1{
+		color: black;
+		position: absolute;
+		left: 10%;
+		top: 50%;
+		transform: translateY(-50%);
+}
+
+.main-container .header #logo-picture{
+	width:75px;
+	height:75px;
+	border-radius: 50px;
+	position:relative;
+	right: 32%;
+}
+.main-container .header h1 span{
+	color: #256D85;
+}
+.main-container .header ul a{
+	padding-left: 1rem;
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: var(--navy);
+	transition: .2s ease-in;
+}
+.main-container .header ul a:hover{
+	color: #06283D;
+}
+
+.main-container .home{
+	height: 100vh;
+	width: 100%;
+	max-height: 1350px;
+	background: url("...")no-repeat center center/cover;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	padding-top: 5.9rem;
+}
+.main-container .home .left{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0 0 0 1rem;
+	max-height: 820px;
+	margin: 0 auto;
+}
+.main-container .home .left h1{
+	font-size: 3.5rem;
+	font-weight: 550;
+	margin-bottom: 2.5rem;
+	line-height: 5rem;
+	word-break: break-word;
+
+}
+.main-container .home .left h1 span{
+	color: var(--cold);
+}
+.main-container .home .left p{
+	font-size: 1.2rem;
+	color: gray;
+	max-width: 600px;
+}
+.main-container .home .left a{
+	margin-top: 1.5rem;
+	text-decoration: none;
+	background: var(--gradient);
+	color: #ffff;
+	padding: .9rem 2.3rem;
+	border-radius: 2rem;
+}
+.main-container .home .right img{
+	width: 90%;
+	height: 90%;
+	max-height: 45rem;
+	max-width: 45rem;
+	animation: float .8s linear alternate infinite;
+}
+
+@keyframes float{ 
+	0%{}
+	100%{
+		transform:translateY(15px);
+	}
+}
+
+
+@media screen and (max-width: 990px){
+	.main-container .home{
+		place-items:  center;
+
+	}
+	.main-container .header i{
+		display: block;
+	}
+	.main-container .header i:nth-child(2){
+		display: none;
+		cursor: pointer;
+	}
+	.main-container .header ul{
+		position: absolute;
+		/*top: 5.9rem;*/
+		top: -11.5rem;
+		height: 12rem;
+		width: 100%;
+		background: #ffff;
+		display: flex;
+		flex-direction: column;
+		z-index: 1;
+		transition: .3s ease;
+	}
+	.main-container .header ul a{
+		padding: 0;
+		height: 2rem;
+		text-align: center;
+
+	}
+}
+@media screen and (max-width: 700px){
+	.main-container .home{
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, auto-fill);
+		grid-template-areas: 
+		"image"
+		"content";
+		height: 100%;
+		padding-bottom: 1rem;
+
+	}
+	.main-container .home .left{
+		grid-area: content;
+		justify-content: unset;
+		
+	}
+	.main-container .home .right{
+		grid-area: image;
+	}
+	.main-container .home .right img{
+	max-height: 15rem;
+	max-width: 35rem;
+	}
+
+}
+@media screen and (max-width: 400px){
+	.main-container .home{
+		height: 100%;
+	}
+	.main-container .home .left h1{
+		font-size: 2.5rem;
+		word-break: break-word;
+	}
+	.main-container .home .left a{
+		padding: .5rem 1rem;
+		margin-top: .7rem;
+	}
+}

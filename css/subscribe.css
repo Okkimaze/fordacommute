@@ -1,0 +1,72 @@
+.main-container .subscribe{
+	width: 100%;
+	height: 100%;
+	background: var(--gradient);
+	padding-bottom: 3rem;
+}
+.main-container .subscribe h1{
+	color: #ffff;
+	text-align: center;
+	padding: 4rem;
+}
+.main-container .subscribe p{
+	word-break: break-word;
+	width: 100%;
+	max-width: 600px;
+	text-align: center;
+	margin: 0 auto;
+	color: #ffff;
+	font-size: 1.2rem;
+	opacity: .9;
+	padding-bottom: 2rem;
+}
+.main-container .subscribe form{
+	max-width: 70rem;
+	display: flex;
+	border: .2rem solid #ffffff;
+	padding-bottom: .5rem;
+	border-radius: 5rem;
+	margin: .2rem auto;
+	height: 5rem;
+}
+.main-container .subscribe form input:nth-child(1){
+	padding-bottom: 0 .2rem;
+	background: none;
+	width: 100%;
+	outline: none;
+	border: none;
+	color: #ffff;
+	padding-left: .5rem;
+	font-size: 1.7rem;
+}
+
+.main-container .subscribe form input:nth-child(1)::placeholder{
+	color: #ffff;
+	opacity: .8;
+}
+.main-container .subscribe form input:nth-child(2){
+	background: #ffff;
+	border-radius: 5rem;
+	width: 15rem;
+	cursor: pointer;
+	font-size: 2rem;
+	transition: .3s ease;
+	border-radius: none;
+	outline: none;
+	margin: 4px 4px 0 0;
+}
+.main-container .subscribe form input:nth-child(2):hover{
+	background: var(--gradient);
+	color: #ffff;
+}
+
+@media screen and (max-width:500px){
+		.main-container .subscribe form input:nth-child(1){
+		font-size: 1rem;
+	}
+		.main-container .subscribe form input:nth-child(2){
+		width: 10rem;
+		font-size: 1.2rem;
+	}
+}
+
